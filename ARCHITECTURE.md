@@ -123,6 +123,20 @@ cd /home/user/codex/mcp-gateway && npm install && npm start
 
 ---
 
+## 7. Status MCP Gateway (2026-11-27)
+
+Przetestowany pełny MCP handshake:
+1. `GET /health` → `{"status":"ok","tools":8,"sessions":0}`
+2. `POST /mcp` initialize → SSE `{"protocolVersion":"2024-11-05","capabilities":{"tools":{}}}`
+3. `POST /mcp` notifications/initialized → `202 Accepted`
+4. `POST /mcp` tools/list → 8 meta-tools zwrócone
+5. `POST /mcp` tools/call lokis_ai/infer → `{"status":"not_configured"}` (oczekiwane)
+
+Fix: SDK 1.32.2 wymaga `Server` z `capabilities:{tools:{}}` zamiast `McpServer.tool()`.
+Commit: `33748b2` w CODEX/mcp-gateway/src/index.ts
+
+---
+
 ## 6. Zmiany plików (ten commit)
 
 | Plik | Zmiana |
