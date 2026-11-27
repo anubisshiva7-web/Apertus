@@ -76,6 +76,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs">
@@ -113,8 +114,16 @@
     <Compile Include="RPC\BlockchainRPCException.cs" />
     <Compile Include="RPC\Response\ListTransactionsResponse.cs" />
     <Compile Include="RPC\Response\ValidateAddressResponse.cs" />
+    <Compile Include="Tools\MCPClient.cs" />
+    <Compile Include="Tools\IRCFleet.cs" />
     <Compile Include="Tools\Search.cs" />
     <Compile Include="Tools\WebBrowserHelper.cs" />
+    <Compile Include="Orchestrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orchestrator.Designer.cs">
+      <DependentUpon>Orchestrator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trust.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +150,9 @@
     <Compile Include="Wallets.Designer.cs">
       <DependentUpon>Wallets.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Orchestrator.resx">
+      <DependentUpon>Orchestrator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
       <SubType>Designer</SubType>

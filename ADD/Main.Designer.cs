@@ -58,6 +58,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rPCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.brainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrStatusUpdate = new System.Windows.Forms.Timer(this.components);
             this.tmrProgressBar = new System.Windows.Forms.Timer(this.components);
             this.tmrGetNewTransactions = new System.Windows.Forms.Timer(this.components);
@@ -174,6 +175,7 @@
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.settingsToolStripMenuItem,
+            this.brainToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
@@ -303,9 +305,16 @@
             this.trustToolStripMenuItem.Size = new System.Drawing.Size(243, 38);
             this.trustToolStripMenuItem.Text = "Trust Center";
             this.trustToolStripMenuItem.Click += new System.EventHandler(this.trustToolStripMenuItem_Click);
-            // 
+            //
+            // brainToolStripMenuItem
+            //
+            this.brainToolStripMenuItem.Name = "brainToolStripMenuItem";
+            this.brainToolStripMenuItem.Size = new System.Drawing.Size(76, 33);
+            this.brainToolStripMenuItem.Text = "Brain";
+            this.brainToolStripMenuItem.Click += new System.EventHandler(this.brainToolStripMenuItem_Click);
+            //
             // helpToolStripMenuItem
-            // 
+            //
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
             this.rPCToolStripMenuItem});
@@ -1284,6 +1293,7 @@
         private System.Windows.Forms.PictureBox imgApertusSplash;
         private System.Windows.Forms.TextBox txtInfoBox;
         private System.Windows.Forms.CheckBox chkBackLinks;
+        private System.Windows.Forms.ToolStripMenuItem brainToolStripMenuItem;
     }
 }
 
