@@ -3091,6 +3091,12 @@ namespace ADD
 
         }
 
+        private void brainToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var orchestrator = new Orchestrator();
+            orchestrator.Show(this);
+        }
+
         private void tmrProcessBatch_Tick(object sender, EventArgs e)
         {
             var batchLine = "";
